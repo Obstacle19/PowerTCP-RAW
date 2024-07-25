@@ -1,1 +1,1 @@
-NS3=~/ns3-datacenter/simulator/ns-3.39
+NS3=/home/ss/PowerTCP/simulator/ns-3.39

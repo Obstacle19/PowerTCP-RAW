@@ -39,7 +39,7 @@ algnames["DCTCP"]="DCTCP"
 plt.rcParams.update({'font.size': 22})
 
 
-figlegend = pylab.figure(figsize=(11.5,1.5))
+figlegend = pylab.figure(figsize=(46,1.5))
 lenged_elements=list()
 
 # red green blue brownm grey
@@ -52,8 +52,8 @@ for i in range(1,3):
 for alg in algs:
 
     df = pd.read_csv(results+'result-'+alg+'.burst',delimiter=' ',usecols=[5,9,11,13],names=["th","qlen","time","power"])
-
-    fig,ax = plt.subplots(1,1)
+    fig, ax = plt.subplots(1, 1, figsize=(10, 5))  # 设置图片宽度为10英寸，高度为5英寸
+    # fig,ax = plt.subplots(1,1)
     # fig.suptitle(alg)
     ax.xaxis.grid(True,ls='--')
     ax.yaxis.grid(True,ls='--')
@@ -81,7 +81,8 @@ for alg in algs:
     fig.savefig(plots_dir+alg+'.pdf')
     fig.savefig(plots_dir+alg+'.png')
 
-    fig1,ax2 = plt.subplots(1,1)
+    fig1, ax2 = plt.subplots(1, 1, figsize=(8, 4))  # 设置图片宽度为8英寸，高度为4英寸 
+    # fig1,ax2 = plt.subplots(1,1)
     # fig.suptitle(alg)
     ax2.xaxis.grid(True,ls='--')
     ax2.yaxis.grid(True,ls='--')
